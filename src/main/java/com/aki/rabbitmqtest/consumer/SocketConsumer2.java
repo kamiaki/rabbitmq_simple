@@ -1,5 +1,6 @@
 package com.aki.rabbitmqtest.consumer;
 
+import com.aki.rabbitmqtest.config.RabbitMQConfig;
 import com.aki.rabbitmqtest.po.SocketMessage;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SocketConsumer2 {
-    @RabbitListener(queues = "routingKey")
+    @RabbitListener(queues = RabbitMQConfig.KEY)
     public void receiveSocket(SocketMessage socketMessage) {
         System.out.println("-----------2 接收到消息--------");
         System.out.println("2 消息内容：" + socketMessage.toString());

@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RabbitMQConfig {
+    public static final String KEY = "routingKey";
+
     // Direct 模式创建队列
     // 创建队列
     @Bean
