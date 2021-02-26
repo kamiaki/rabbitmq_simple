@@ -16,6 +16,6 @@ public class RabbitMQConfig {
     // 创建队列
     @Bean
     public Queue directQueue() {
-        return new Queue("routingKey");  // 队列名和routingKey相同
+        return new Queue(KEY);  // 队列名和routingKey相同
     }
 }
