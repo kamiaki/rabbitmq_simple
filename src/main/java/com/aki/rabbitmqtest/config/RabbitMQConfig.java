@@ -13,7 +13,7 @@ public class RabbitMQConfig {
     public static final String KEY = "routingKey";
 
     // Direct 模式创建队列
-    // 创建队列
+    // 创建队列 生产者消费者都得写 不然报错
     @Bean
     public Queue directQueue() {
         return new Queue(KEY);  // 队列名和routingKey相同
